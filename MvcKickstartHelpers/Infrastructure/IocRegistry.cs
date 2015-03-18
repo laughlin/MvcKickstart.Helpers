@@ -8,8 +8,6 @@ using ServiceStack.CacheAccess;
 using StackExchange.Profiling;
 using StackExchange.Profiling.Data;
 using StructureMap.Configuration.DSL;
-using StructureMap.Graph;
-using StructureMap.Web;
 
 namespace MvcKickstart.Infrastructure
 {
