@@ -39,7 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CacheStack">
-      <HintPath>..\packages\CacheStack.1.2\lib\net45\CacheStack.dll</HintPath>
+      <HintPath>..\packages\CacheStack.1.0\lib\net45\CacheStack.dll</HintPath>
     </Reference>
     <Reference Include="Dapper">
       <HintPath>..\packages\Dapper.1.38\lib\net45\Dapper.dll</HintPath>
@@ -75,7 +75,7 @@
       <HintPath>..\packages\ServiceStack.Text.4.0.38\lib\net40\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="Spruce">
-      <HintPath>..\packages\Spruce.1.2\lib\net45\Spruce.dll</HintPath>
+      <HintPath>..\packages\Spruce.1.0\lib\net45\Spruce.dll</HintPath>
     </Reference>
     <Reference Include="StructureMap">
       <HintPath>..\packages\structuremap.3.1.4.143\lib\net40\StructureMap.dll</HintPath>
