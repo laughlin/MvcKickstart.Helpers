@@ -15,7 +15,7 @@ using MvcKickstart.Infrastructure;
 using MvcKickstart.Infrastructure.Extensions;
 using MvcKickstartHelpers;
 using RestSharp;
-using ServiceStack.Caching;
+using ServiceStack.CacheAccess;
 using Spruce;
 
 namespace MvcKickstart.Analytics.Controllers

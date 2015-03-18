@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Reflection;
-using ServiceStack.Caching;
+using ServiceStack.CacheAccess;
 using StackExchange.Profiling;
 using StackExchange.Profiling.Data;
 using StructureMap.Configuration.DSL;

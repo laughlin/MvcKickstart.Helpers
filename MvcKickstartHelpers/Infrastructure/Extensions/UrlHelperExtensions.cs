@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Web.Mvc;
 using CacheStack;
 using ServiceStack;
-using ServiceStack.Caching;
+using ServiceStack.CacheAccess;
 using StructureMap;
 
 namespace MvcKickstart.Infrastructure.Extensions

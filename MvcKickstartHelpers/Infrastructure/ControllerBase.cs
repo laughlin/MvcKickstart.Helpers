@@ -5,7 +5,7 @@ using System.Text;
 using System.Web.Mvc;
 using CacheStack;
 using MvcKickstart.ViewModels;
-using ServiceStack.Caching;
+using ServiceStack.CacheAccess;
 using ServiceStack.Logging;
 
 namespace MvcKickstart.Infrastructure

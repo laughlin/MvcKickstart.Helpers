@@ -4,7 +4,7 @@ using CacheStack;
 using MvcKickstart.Analytics.Infrastructure;
 using MvcKickstart.Analytics.Models;
 using ServiceStack;
-using ServiceStack.Caching;
+using ServiceStack.CacheAccess;
 using Spruce;
 
 namespace MvcKickstart.Analytics.Services

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web;
-using ServiceStack.Caching;
+using ServiceStack.CacheAccess;
 using StructureMap;
 
 namespace MvcKickstart.Infrastructure
