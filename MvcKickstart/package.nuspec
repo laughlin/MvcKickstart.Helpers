@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
-		<id>MvcKickstartHelpers</id>
+		<id>MvcKickstart.Helpers</id>
 		<version>1.0.0</version>
 		<authors>Jim Geurts, Jon Knopp</authors>
-		<projectUrl>https://github.com/laughlin/MvcKickstart</projectUrl>
+		<projectUrl>https://github.com/laughlin/MvcKickstartHelpers</projectUrl>
 		<licenseUrl>https://raw.github.com/laughlin/MvcKickstart/master/LICENSE.txt</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Core set of MVC helpers and configuration classes to kickstart your MVC site.</description>
@@ -33,7 +33,7 @@
 	</metadata>
 	<files>
 		<file src="nuget\**\*.*" target="content" />
-		<file src="bin\Release\MvcKickstartHelpers.dll" target="lib\net45" />
-		<file src="bin\Release\MvcKickstartHelpers.pdb" target="lib\net45" />
+		<file src="bin\Release\MvcKickstart.Helpers.dll" target="lib\net45" />
+		<file src="bin\Release\MvcKickstart.Helpers.pdb" target="lib\net45" />
 	</files>
 </package>

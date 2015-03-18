@@ -7,8 +7,8 @@
     <ProjectGuid>{22459D97-DAC9-412E-9262-6827407D99F5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MvcKickstartHelpers</RootNamespace>
-    <AssemblyName>MvcKickstartHelpers</AssemblyName>
+    <RootNamespace>MvcKickstart.Helpers</RootNamespace>
+    <AssemblyName>MvcKickstart.Helpers</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
