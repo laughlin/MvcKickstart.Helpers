@@ -12,7 +12,7 @@
 		<language>en-US</language>
 		<tags>asp.net mvc kickstart mvckickstart</tags>
 		<dependencies>
-			<dependency id="CacheStack" version="1.0" />
+			<dependency id="CacheStack" version="[1.0,1.0]" />
 			<dependency id="CommonServiceLocator" version="1.0" />
       <dependency id="Google.GData.Analytics" version="2.2" />
 			<dependency id="Microsoft.AspNet.Mvc" version="[5.0.0,5.0.0]" />
@@ -23,7 +23,7 @@
       <dependency id="ServiceStack.Text" version="3.9.71" />
 			<dependency id="ServiceStack.Common" version="3.9.71" />
 			<dependency id="ServiceStack.Logging.Log4Net" version="3.9.71" />
-			<dependency id="Spruce" version="1.0" />
+			<dependency id="Spruce" version="[1.0,1.0]" />
 			<dependency id="structuremap" version="2.6.4" />
 			<dependency id="WebActivatorEx" version="2.0" />
 		</dependencies>
