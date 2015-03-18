@@ -38,8 +38,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CacheStack, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="CacheStack">
       <HintPath>..\packages\CacheStack.1.0\lib\net45\CacheStack.dll</HintPath>
     </Reference>
     <Reference Include="Dapper">
