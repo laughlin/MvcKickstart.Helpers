@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22459D97-DAC9-412E-9262-6827407D99F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvcKickstartHelpers</RootNamespace>
+    <AssemblyName>MvcKickstartHelpers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>fda2fd10</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CacheStack">
+      <HintPath>..\packages\CacheStack.1.2\lib\net45\CacheStack.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.38\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Analytics">
+      <HintPath>..\packages\Google.GData.Analytics.2.2.0.0\lib\Google.GData.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client">
+      <HintPath>..\packages\Google.GData.Client.2.2.0.0\lib\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniProfiler">
+      <HintPath>..\packages\MiniProfiler.3.1.1.140\lib\net40\MiniProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\packages\ServiceStack.Common.4.0.38\lib\net40\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\packages\ServiceStack.Interfaces.4.0.38\lib\portable-wp80+sl5+net40+win8+monotouch+monoandroid\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Logging.Log4Net">
+      <HintPath>..\packages\ServiceStack.Logging.Log4Net.4.0.38\lib\net40\ServiceStack.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.4.0.38\lib\net40\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="Spruce">
+      <HintPath>..\packages\Spruce.1.2\lib\net45\Spruce.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\packages\structuremap.3.1.4.143\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Net4">
+      <HintPath>..\packages\structuremap.3.1.4.143\lib\net40\StructureMap.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Web">
+      <HintPath>..\packages\structuremap.web.3.1.0.133\lib\net40\StructureMap.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\WidgetsController.cs" />
+    <Compile Include="Infrastructure\Attributes\GaugeMetricAttribute.cs" />
+    <Compile Include="Infrastructure\Attributes\HandlesErrorAttribute.cs" />
+    <Compile Include="Infrastructure\Attributes\PasswordStrengthAttribute.cs" />
+    <Compile Include="Infrastructure\Attributes\ProfileActionAttribute.cs" />
+    <Compile Include="Infrastructure\Attributes\TimingMetricAttribute.cs" />
+    <Compile Include="Infrastructure\Attributes\TrackAuthenticationMetricsAttribute.cs" />
+    <Compile Include="Infrastructure\CacheHandler.cs" />
+    <Compile Include="Infrastructure\CacheKeys.cs" />
+    <Compile Include="Infrastructure\ControllerBase.cs" />
+    <Compile Include="Infrastructure\Data\Migrations\InitKickstartAnalytics.cs" />
+    <Compile Include="Infrastructure\ExpressionHelper.cs" />
+    <Compile Include="Infrastructure\Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Infrastructure\Extensions\HtmlHelperExtensions.cs" />
+    <Compile Include="Infrastructure\Extensions\ModelStateExtensions.cs" />
+    <Compile Include="Infrastructure\Extensions\StringExtensions.cs" />
+    <Compile Include="Infrastructure\Extensions\UrlHelperExtensions.cs" />
+    <Compile Include="Infrastructure\ICacheClientBroadcaster.cs" />
+    <Compile Include="Infrastructure\IMetricTracker.cs" />
+    <Compile Include="Infrastructure\IocRegistry.cs" />
+    <Compile Include="Infrastructure\MemoryCacheClient.cs" />
+    <Compile Include="Infrastructure\MetricAppender.cs" />
+    <Compile Include="Infrastructure\MetricBase.cs" />
+    <Compile Include="Infrastructure\MetricStopwatch.cs" />
+    <Compile Include="Infrastructure\MetricTracker.cs" />
+    <Compile Include="Infrastructure\Modules\Log4NetContextInformationModule.cs" />
+    <Compile Include="Infrastructure\Modules\ProfiledUrlRoutingModule.cs" />
+    <Compile Include="Infrastructure\Notification.cs" />
+    <Compile Include="Infrastructure\NotificationType.cs" />
+    <Compile Include="Infrastructure\ServiceStackJsonResult.cs" />
+    <Compile Include="Infrastructure\SmtpCachingAppender.cs" />
+    <Compile Include="Infrastructure\StructureMapDependencyResolver.cs" />
+    <Compile Include="Infrastructure\VaryByCustom.cs" />
+    <Compile Include="Infrastructure\ViewDataConstants.cs" />
+    <Compile Include="Models\GoogleAnalytics\Account.cs" />
+    <Compile Include="Models\GoogleAnalytics\Link.cs" />
+    <Compile Include="Models\GoogleAnalytics\ListResponse.cs" />
+    <Compile Include="Models\GoogleAnalytics\Profile.cs" />
+    <Compile Include="Models\SiteSettings.cs" />
+    <Compile Include="Models\SiteSettingsBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestSharpJsonSerializer.cs" />
+    <Compile Include="Services\SiteSettingsService.cs" />
+    <Compile Include="ViewModels\Error.cs" />
+    <Compile Include="ViewModels\Widgets\Analytics.cs" />
+    <Compile Include="ViewModels\Widgets\Authorize.cs" />
+    <Compile Include="ViewModels\Widgets\Config.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Nuget\App_Start\FiltersConfig.cs.pp" />
+    <None Include="Nuget\App_Start\IocConfig.cs.pp" />
+    <None Include="Nuget\App_Start\JsonConfig.cs.pp" />
+    <None Include="Nuget\App_Start\LoggingConfig.cs.pp" />
+    <None Include="Nuget\App_Start\MvcKickstartDbMigrator.cs.pp" />
+    <None Include="Nuget\Areas\Admin\Views\Web.config.install.xdt" />
+    <None Include="Nuget\Areas\Admin\Views\Web.config.uninstall.xdt" />
+    <None Include="Nuget\Content\css\Admin\Widgets\Analytics.css.pp" />
+    <None Include="Nuget\Content\js\Admin\Widgets\Analytics.js.pp" />
+    <None Include="Nuget\Content\js\_lib\jquery.flot\bundle.txt.pp" />
+    <None Include="Nuget\Content\js\_lib\jquery.flot\jquery.flot.js.pp" />
+    <None Include="Nuget\Views\Web.config.install.xdt" />
+    <None Include="Nuget\Views\Web.config.uninstall.xdt" />
+    <None Include="Nuget\Web.config.install.xdt" />
+    <None Include="Nuget\Web.config.uninstall.xdt" />
+    <None Include="Nuget\Web.Release.config.pp" />
+    <None Include="Nuget\Web.Review.config.pp" />
+    <None Include="package.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
