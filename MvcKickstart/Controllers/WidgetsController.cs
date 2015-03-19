@@ -13,7 +13,6 @@ using MvcKickstart.Analytics.Services;
 using MvcKickstart.Analytics.ViewModels.Widgets;
 using MvcKickstart.Infrastructure;
 using MvcKickstart.Infrastructure.Extensions;
-using MvcKickstartHelpers;
 using RestSharp;
 using ServiceStack.CacheAccess;
 using Spruce;
