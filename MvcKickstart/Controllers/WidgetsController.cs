@@ -7,12 +7,13 @@ using CacheStack;
 using CacheStack.DonutCaching;
 using Google.GData.Analytics;
 using Google.GData.Client;
+using MvcKickstart.Analytics.Infrastructure.Extensions;
 using MvcKickstart.Analytics.Models;
 using MvcKickstart.Analytics.Models.GoogleAnalytics;
-using MvcKickstart.Analytics.Services;
 using MvcKickstart.Analytics.ViewModels.Widgets;
 using MvcKickstart.Infrastructure;
-using MvcKickstart.Infrastructure.Extensions;
+using MvcKickstart.Analytics.Services;
+using MvcKickstart.RestSharp;
 using RestSharp;
 using ServiceStack.CacheAccess;
 using Spruce;
@@ -85,7 +86,7 @@ namespace MvcKickstart.Analytics.Controllers
 			}
 
 			duration = duration ?? 30;
-			var model = new MvcKickstart.Analytics.ViewModels.Widgets.Analytics
+			var model = new ViewModels.Widgets.Analytics
 			            	{
 								Duration = duration.Value,
 								Start = DateTime.Today.AddDays(-1 * duration.Value),

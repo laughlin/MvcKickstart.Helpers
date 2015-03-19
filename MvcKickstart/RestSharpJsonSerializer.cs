@@ -2,7 +2,7 @@
 using RestSharp.Deserializers;
 using RestSharp.Serializers;
 
-namespace MvcKickstart
+namespace MvcKickstart.RestSharp
 {
 	public class RestSharpJsonSerializer : ISerializer, IDeserializer
 	{

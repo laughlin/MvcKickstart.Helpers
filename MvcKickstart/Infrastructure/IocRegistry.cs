@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Configuration;
 using System.Data;
-using System.Data.Common;
 using System.Data.SqlClient;
 using System.Reflection;
 using ServiceStack.CacheAccess;
 using StackExchange.Profiling;
 using StackExchange.Profiling.Data;
+using StructureMap;
 using StructureMap.Configuration.DSL;
 
 namespace MvcKickstart.Infrastructure
@@ -31,40 +31,37 @@ namespace MvcKickstart.Infrastructure
 						scan.WithDefaultConventions();
 					});
 
-            var connStr = "Default";
-            if (ConfigurationManager.ConnectionStrings[Environment.MachineName] != null)
-                connStr = Environment.MachineName;
-            For<SqlConnection>()
-                .Use(
-                    () =>
-                        new SqlConnection(ConfigurationManager.ConnectionStrings[connStr].ConnectionString));
+			For<SqlConnection>().Use(() =>
+			{
+				var connStr = "Default";
+				if (ConfigurationManager.ConnectionStrings[Environment.MachineName] != null)
+					connStr = Environment.MachineName;
+				return new SqlConnection(ConfigurationManager.ConnectionStrings[connStr].ConnectionString);
+			});
 
 			For<IDbConnection>()
 				.HybridHttpOrThreadLocalScoped()
-                .Use(ctx => OpenConnection(ctx.GetInstance<SqlConnection>()))
+				.Use(() =>
+					{
+						var connection = ObjectFactory.GetInstance<SqlConnection>();
+						connection.Open();
+						return new ProfiledDbConnection(connection, MiniProfiler.Current);						
+					})
 				.Named("Database Connection");
 
 			For<IMetricTracker>()
 				.Singleton()
-				.Use(() => StartMetricTracker())
+				.Use(x =>
+				     	{
+				     		int port;
+				     		int.TryParse(ConfigurationManager.AppSettings["Metrics:Port"], out port);
+				     		return new MetricTracker(ConfigurationManager.AppSettings["Metrics:Host"], port, ConfigurationManager.AppSettings["Metrics:Prefix"]);
+				     	})
 				.Named("Metric Tracker");
 
 			For<ICacheClient>()
 				.Singleton()
 				.Use(x => new MemoryCacheClient());
 		}
-
-        private static ProfiledDbConnection OpenConnection(DbConnection connection)
-        {
-            connection.Open();
-            return new ProfiledDbConnection(connection, MiniProfiler.Current);
-        }
-
-        private static MetricTracker StartMetricTracker()
-        {
-            int port;
-            int.TryParse(ConfigurationManager.AppSettings["Metrics:Port"], out port);
-            return new MetricTracker(ConfigurationManager.AppSettings["Metrics:Host"], port, ConfigurationManager.AppSettings["Metrics:Prefix"]);
-        }
 	}
 }
