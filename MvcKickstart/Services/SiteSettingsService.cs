@@ -1,11 +1,10 @@
 ﻿using System.Data;
 using System.Linq;
 using CacheStack;
-using Dapper;
 using MvcKickstart.Analytics.Infrastructure;
 using MvcKickstart.Analytics.Models;
-using ServiceStack;
 using ServiceStack.CacheAccess;
+using ServiceStack.Text;
 using Spruce;
 
 namespace MvcKickstart.Analytics.Services

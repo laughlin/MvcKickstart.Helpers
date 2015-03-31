@@ -3,8 +3,8 @@ using System.Configuration;
 using System.Web.Mvc;
 using CacheStack;
 using MvcKickstart.Infrastructure.Extensions;
-using ServiceStack;
 using ServiceStack.CacheAccess;
+using ServiceStack.Text;
 using StructureMap;
 
 namespace MvcKickstart.Analytics.Infrastructure.Extensions

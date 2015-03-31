@@ -7,9 +7,9 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using ServiceStack;
 using ServiceStack.CacheAccess;
 using ServiceStack.Logging;
+using ServiceStack.Text;
 
 namespace MvcKickstart.Infrastructure
 {
