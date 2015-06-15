@@ -1,39 +1,41 @@
 ﻿<?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-	<metadata>
-		<id>MvcKickstart.Helpers</id>
-		<version>1.0.0</version>
-		<authors>Jim Geurts, Jon Knopp</authors>
-		<projectUrl>https://github.com/laughlin/MvcKickstartHelpers</projectUrl>
-		<licenseUrl>https://raw.github.com/laughlin/MvcKickstart/master/LICENSE.txt</licenseUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>Core set of MVC helpers and configuration classes to kickstart your MVC site.</description>
-		<summary>Core set of MVC helpers and configuration classes to kickstart your MVC site.</summary>
-		<language>en-US</language>
-		<tags>asp.net mvc kickstart mvckickstart</tags>
-		<dependencies>
-			<dependency id="CacheStack" version="[1.0,1.0]" />
-			<dependency id="CommonServiceLocator" version="[1.0.0.0,1.0.0.0]" />
-      <dependency id="Google.GData.Analytics" version="2.2" />
-			<dependency id="Microsoft.AspNet.Mvc" version="[5.0.0,5.0.0]" />
-			<dependency id="Microsoft.Net.Http" version="2.2" />
-			<dependency id="Microsoft.Web.Infrastructure" version="1.0" />
-			<dependency id="MiniProfiler" version="2.1.0" />
-      <dependency id="RestSharp" version="104.4" />
-      <dependency id="ServiceStack.Text" version="[3.9.71,3.9.71]" />
-			<dependency id="ServiceStack.Common" version="[3.9.71,3.9.71]" />
-			<dependency id="ServiceStack.Logging.Log4Net" version="[3.9.71,3.9.71]" />
-			<dependency id="Spruce" version="[1.0,1.0]" />
-			<dependency id="structuremap" version="[2.6.4,2.6.4]" />
-			<dependency id="WebActivatorEx" version="2.0" />
-		</dependencies>
-		<releaseNotes>v1.2 Changes:
-* Support ASP.NET MVC v5
-* Support MemoryCacheClient in a webfarm environment</releaseNotes>
-	</metadata>
-	<files>
-		<file src="nuget\**\*.*" target="content" />
-		<file src="bin\Release\MvcKickstart.Helpers.dll" target="lib\net45" />
-		<file src="bin\Release\MvcKickstart.Helpers.pdb" target="lib\net45" />
-	</files>
+    <metadata>
+        <id>MvcKickstart.Helpers</id>
+        <version>1.0.0</version>
+        <authors>Jim Geurts, Jon Knopp</authors>
+        <projectUrl>https://github.com/laughlin/MvcKickstartHelpers</projectUrl>
+        <licenseUrl>https://raw.github.com/laughlin/MvcKickstart/master/LICENSE.txt</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Core set of MVC helpers and configuration classes to kickstart your MVC site.</description>
+        <summary>Core set of MVC helpers and configuration classes to kickstart your MVC site.</summary>
+        <language>en-US</language>
+        <tags>asp.net mvc kickstart mvckickstart</tags>
+        <dependencies>
+            <dependency id="CacheStack" version="[1.0,1.0]" />
+            <dependency id="CommonServiceLocator" version="[1.0.0.0,1.0.0.0]" />
+            <dependency id="Google.GData.Analytics" version="2.2" />
+            <dependency id="Microsoft.AspNet.Mvc" version="[5.0.0,5.0.0]" />
+            <dependency id="Microsoft.Net.Http" version="2.2" />
+            <dependency id="Microsoft.Web.Infrastructure" version="1.0" />
+            <dependency id="MiniProfiler" version="2.1.0" />
+            <dependency id="RestSharp" version="104.4" />
+            <dependency id="ServiceStack.Text" version="[3.9.71,3.9.71]" />
+            <dependency id="ServiceStack.Common" version="[3.9.71,3.9.71]" />
+            <dependency id="ServiceStack.Logging.Log4Net" version="[3.9.71,3.9.71]" />
+            <dependency id="Spruce" version="[1.0,1.0]" />
+            <dependency id="structuremap" version="[2.6.4,2.6.4]" />
+            <dependency id="WebActivatorEx" version="2.0" />
+        </dependencies>
+        <releaseNotes>
+            v1.2 Changes:
+            * Support ASP.NET MVC v5
+            * Support MemoryCacheClient in a webfarm environment
+        </releaseNotes>
+    </metadata>
+    <files>
+        <file src="nuget\**\*.*" target="content" />
+        <file src="bin\Release\MvcKickstart.Helpers.dll" target="lib\net45" />
+        <file src="bin\Release\MvcKickstart.Helpers.pdb" target="lib\net45" />
+    </files>
 </package>
