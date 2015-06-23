@@ -8,7 +8,6 @@ target/
 *.cache
 Thumbs.db
 *.bak
-*.cache
 *.log
 *.log.*
 log.txt
@@ -21,3 +20,4 @@ _notes
 aspnet_client
 httpd.parse.errors
 packages/
+*.GhostDoc.xml
