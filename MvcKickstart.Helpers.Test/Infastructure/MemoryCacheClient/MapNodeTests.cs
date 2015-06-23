@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using MvcKickstart.Infrastructure;
 
 namespace MvcKickstartHelpers.Test.Infastructure
 {
-    [TestClass]
-    public class MapNodeTests
+    public class MapNodeTests: TestBase
     {
-        [TestMethod]
+        [Test]
         public void ZeroParts_ReturnFalse()
         {
             var inputs = new string[] { };
@@ -16,7 +14,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.IsFalse(subject.MapNode(inputs, string.Empty));
         }
 
-        [TestMethod]
+        [Test]
         public void OnePart_ReturnFalse()
         {
             var inputs = new string[]{"somestring"};
@@ -25,7 +23,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.IsFalse(subject.MapNode(inputs, string.Empty));
         }
 
-        [TestMethod]
+        [Test]
         public void MachineNameNoOverride_ReturnFalse()
         {
             var inputs = new string[] { Environment.MachineName, "someurl" };
@@ -33,7 +31,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.IsFalse(subject.MapNode(inputs, string.Empty));
         }
 
-        [TestMethod]
+        [Test]
         public void MachineNameOverride_ReturnTrue()
         {
             var inputs = new string[] { Environment.MachineName, "someurl" };
@@ -42,7 +40,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.IsTrue(subject.BroadcastNodes.Contains("http://someurl"));
         }
 
-        [TestMethod]
+        [Test]
         public void NoneMachineName_ReturnTrue()
         {
             var inputs = new string[] { "somemachinename", "someurl" };
@@ -51,7 +49,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.IsTrue(subject.BroadcastNodes.Contains("http://someurl"));
         }
 
-        [TestMethod]
+        [Test]
         public void NodeNull_ReturnFalse()
         {
             var inputs = new string[] { "somemachinename", null };
@@ -59,7 +57,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.IsFalse(subject.MapNode(inputs, string.Empty));
         }
 
-        [TestMethod]
+        [Test]
         public void NodeEmpty_ReturnFalse()
         {
             var inputs = new string[] { "somemachinename", string.Empty };

@@ -1,12 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Should.Fluent;
+using NUnit.Framework;
 using MvcKickstart.Infrastructure;
 
 namespace MvcKickstartHelpers.Test.Infastructure
 {
-    [TestClass]
-    public class AddNodeToBroadcastMapTests
+    public class AddNodeToBroadcastMapTests: TestBase
     {
-        [TestMethod]
+        [Test]
         public void NullNodeName_NotAddedReturnFalse()
         {
             var subject = new MemoryCacheClient();
@@ -14,7 +14,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.AreEqual(0, subject.BroadcastNodes.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void EmptyNodeName_NotAddedReturnFalse()
         {
             var subject = new MemoryCacheClient();
@@ -22,7 +22,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.AreEqual(0, subject.BroadcastNodes.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void NonEmptyNullName_AddReturnTrue()
         {
             var subject = new MemoryCacheClient();

@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Collections.Generic;
 using MvcKickstart.Infrastructure;
+using NUnit.Framework;
 
 namespace MvcKickstartHelpers.Test.Infastructure
 {
-    [TestClass]
-    public class ConfigureCacheTests
+    public class ConfigureCacheTests: TestBase
     {
-        [TestMethod]
+        [Test]
         public void NullNodes_ReturnFalse()
         {
             var subject = new MemoryCacheClient();
             Assert.IsFalse(subject.ConfigureCache(null));
         }
 
-        [TestMethod]
+        [Test]
         public void EmptyList_ReturnTrue()
         {
             var subject = new MemoryCacheClient();
@@ -23,14 +21,14 @@ namespace MvcKickstartHelpers.Test.Infastructure
         }
 
 
-        [TestMethod]
+        [Test]
         public void ListWithNullEntries_ReturnFalse()
         {
             var subject = new MemoryCacheClient();
             Assert.IsFalse(subject.ConfigureCache(new List<string>{"somestring", "some other string", null}));
         }
 
-        [TestMethod]
+        [Test]
         public void ListWithEmptyEntries_ReturnFalse()
         {
             var subject = new MemoryCacheClient();
