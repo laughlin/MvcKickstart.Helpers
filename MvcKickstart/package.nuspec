@@ -24,7 +24,7 @@
             <dependency id="ServiceStack.Common" version="[3.9.71,3.9.71]" />
             <dependency id="ServiceStack.Logging.Log4Net" version="[3.9.71,3.9.71]" />
             <dependency id="Spruce" version="[1.0,1.0]" />
-            <dependency id="structuremap" version="[2.6.4,2.6.4]" />
+            <dependency id="structuremap" version="[2.6.4.1,2.6.4.1]" />
             <dependency id="WebActivatorEx" version="2.0" />
         </dependencies>
         <releaseNotes>
