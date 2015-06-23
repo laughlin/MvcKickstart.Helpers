@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using MvcKickstart.Infrastructure;
 
 namespace MvcKickstartHelpers.Test.Infastructure
 {
-    [TestClass]
-    public class HandleBroadcastConfigurationNodeTests
+
+    public class HandleBroadcastConfigurationNodeTests: TestBase
     {
-        [TestMethod]
+        [Test]
         public void NullConfig_ReturnFalse()
         {
             var subject = new MemoryCacheClient();
@@ -15,7 +15,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.AreEqual(0, subject.BroadcastNodes.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void EmptyConfig_ReturnFalse()
         {
             var subject = new MemoryCacheClient();
@@ -24,7 +24,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
         }
 
         #region Non Map
-        [TestMethod]
+        [Test]
         public void NonMapMachineName_NoAddReturnFalse()
         {
             var subject = new MemoryCacheClient();
@@ -32,7 +32,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.AreEqual(0, subject.BroadcastNodes.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void NonMapNonMachineName_AddReturnTrue()
         {
             const string text = "somemachinename";
@@ -45,7 +45,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
         #endregion
 
         #region MAP
-        [TestMethod]
+        [Test]
         public void MapMachineName_NoAddReturnFalse()
         {
             const string url = "someurl";
@@ -55,7 +55,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.AreEqual(0, subject.BroadcastNodes.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void MapNonMachineName_AddReturnTrue()
         {
             const string url = "someurl";
@@ -67,7 +67,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.IsTrue(subject.BroadcastNodes.Contains(httpUrl));
         }
 
-        [TestMethod]
+        [Test]
         public void MapMachineNameForce_AddReturnTrue()
         {
             const string url = "someurl";
@@ -79,7 +79,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.IsTrue(subject.BroadcastNodes.Contains(httpUrl));
         }
 
-        [TestMethod]
+        [Test]
         public void MapMachineNameIgnoreLocal_AddReturnTrue()
         {
             const string url = "someurl";
@@ -91,7 +91,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.IsTrue(subject.BroadcastNodes.Contains(httpUrl));
         }
 
-        [TestMethod]
+        [Test]
         public void MapMachineNameForceIgnoreLocal_AddReturnTrue()
         {
             const string url = "someurl";
@@ -103,7 +103,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.IsTrue(subject.BroadcastNodes.Contains(httpUrl));
         }
 
-        [TestMethod]
+        [Test]
         public void MapMachineNameNonSupportedConfig_NoAddReturnFalse()
         {
             const string url = "someurl";
@@ -113,7 +113,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.AreEqual(0, subject.BroadcastNodes.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void MapNonMachineNameWithConfig_AddReturnTrue()
         {
             const string url = "someurl";
@@ -125,7 +125,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.IsTrue(subject.BroadcastNodes.Contains(httpUrl));
         }
 
-        [TestMethod]
+        [Test]
         public void Map4Sections_NoAddReturnFalse()
         {
             const string url = "someurl";
@@ -135,7 +135,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.AreEqual(0, subject.BroadcastNodes.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void MapEmptyFirstSection_AddReturnTrue()
         {
             const string url = "someurl";
@@ -147,7 +147,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.IsTrue(subject.BroadcastNodes.Contains(httpUrl));
         }
 
-        [TestMethod]
+        [Test]
         public void MapEmptySecondSection_NoAddReturnFalse()
         {
             const string url = "";
@@ -157,7 +157,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.AreEqual(0, subject.BroadcastNodes.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void MapEmptyThirdSectionMachineName_NoAddReturnFalse()
         {
             const string url = "someurl";
@@ -167,7 +167,7 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.AreEqual(0, subject.BroadcastNodes.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void MapEmptyThirdSectionNonMachineName_AddReturnTrue()
         {
             const string url = "someurl";

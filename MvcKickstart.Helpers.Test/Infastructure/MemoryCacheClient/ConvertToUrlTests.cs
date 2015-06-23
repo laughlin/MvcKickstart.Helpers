@@ -1,24 +1,24 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MvcKickstart.Infrastructure;
+﻿using MvcKickstart.Infrastructure;
+using NUnit.Framework;
+
 
 namespace MvcKickstartHelpers.Test.Infastructure
 {
-    [TestClass]
-    public class ConvertToUrlTests
+    public class ConvertToUrlTests: TestBase
     {
-        [TestMethod]
+        [Test]
         public void NullNodeName_ReturnEmptyString()
         {
             Assert.AreEqual(string.Empty, MemoryCacheClient.ConvertToUrl(null));
         }
 
-        [TestMethod]
+        [Test]
         public void EmptyNodeName_ReturnEmptyString()
         {
             Assert.AreEqual(string.Empty, MemoryCacheClient.ConvertToUrl(string.Empty));
         }
 
-        [TestMethod]
+        [Test]
         public void NonEmptyNullName_ReturnStringWithHttp()
         {
             const string text = "non empty null string";
@@ -26,14 +26,14 @@ namespace MvcKickstartHelpers.Test.Infastructure
             Assert.AreEqual(expectedText, MemoryCacheClient.ConvertToUrl(text));
         }
 
-        [TestMethod]
+        [Test]
         public void HttpName_ReturnHttpName()
         {
             const string text = "http://non empty null string";
             Assert.AreEqual(text, MemoryCacheClient.ConvertToUrl(text));
         }
 
-        [TestMethod]
+        [Test]
         public void NonLowerHttpName_ReturnHttpName()
         {
             const string text = "HtTp://non empty null string";
